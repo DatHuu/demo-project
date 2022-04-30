@@ -1,0 +1,14 @@
+#header {
+    background-color: white;
+}
+
+a {
+    color: black;
+    font-weight: bold;
+}
+
+#home {
+    margin-left: 5em;
+    background-color: #58B8C6;
+    border-radius: 5em;
+}
