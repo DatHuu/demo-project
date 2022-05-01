@@ -1,11 +1,31 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { deleteDepartmentById, getAllDepartments } from "../api/DeptEmpManageService";
+import { confirmAlert } from "react-confirm-alert";
+
 function DepartmentComponent() {
   let navigate = useNavigate();
 
-  const handleUpdate = (id) => {
-    navigate(`/department/${id}`);
+  const [departments, setDepartments] = useState([]);
+
+  useEffect(() => {
+    fetchAPI();
+  }, []);
+
+  const fetchAPI = async () => {
+    const allDepartments = await getAllDepartments();
+    setDepartments(allDepartments);
   };
+
+  const handleUpdate = (id) => {
+    navigate(`/departments/${id}`);
+  };
+
+  const handleDelete = async (id) => {
+     await deleteDepartmentById(id);
+     fetchAPI();
+  };
+
   return (
     <div>
       <h1 style={{ color: "black" }}>Department Manage</h1>
@@ -19,20 +39,27 @@ function DepartmentComponent() {
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>abc</td>
-              <td>abc</td>
+          {departments.map((department) => (
+              <tr key={department.id}>
+                <td>{department.id}</td>
+                <td>{department.name}</td>
               <td>
                 <button
                   style={{ marginRight: "10px" }}
                   className="btn btn-success"
-                  onClick={() => handleUpdate()}
+                  onClick={() => handleUpdate(department.id)}
                 >
                   Update
                 </button>
-                <button className="btn btn-warning">Delete</button>
+                <button
+                  className="btn btn-warning"
+                  onClick={() => handleDelete(department.id)}
+                >
+                  Delete
+                </button>
               </td>
             </tr>
+          ))}
           </tbody>
         </table>
         <button
