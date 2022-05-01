@@ -1,10 +1,12 @@
 import React from "react";
-import './HomeComponent.css'
+import "./HomeComponent.css";
 
 function HomeComponent() {
-  
   return (
-    <div>Home page</div>
+    <div className="text-center">
+      <span className="helper"></span>
+      <img height={500} width={900} className="rounded" src={require("../img/workplace.jpg")} />
+    </div>
   );
 }
 

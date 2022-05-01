@@ -1,3 +1,7 @@
-.homeBody {
-    /* background-color: #58B8C6; */
+.text-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 800px;
 }
+

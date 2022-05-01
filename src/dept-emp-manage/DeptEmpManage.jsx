@@ -24,6 +24,7 @@ function DeptEmpManage() {
           <Route path="/department/:id" element={<DepartmentCreate />} />
           <Route path="/employee/:id" element={<EmployeeCreate />} />
           <Route path="/about" element={<AboutComponent/>}/>
+          <Route path="/" element={<HomeComponent/>}/>
           <Route path="/*" element={<PageNotFound />} />
         </Routes>
       </div>
