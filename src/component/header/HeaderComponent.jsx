@@ -14,7 +14,7 @@ const HeaderComponent = () => {
           </li>
         </ul>
         <ul className="navbar-nav navbar-collapse justify-content-end">
-        <li>
+          <li>
             <Link className="nav-link" to="/department">
               Department
             </Link>
@@ -25,40 +25,13 @@ const HeaderComponent = () => {
             </Link>
           </li>
           <li>
-            <Link className="nav-link" to="/home">
+            <Link className="nav-link" to="/about">
               About
             </Link>
           </li>
         </ul>
       </nav>
     </div>
-    // <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    //   <a class="navbar-brand" href="/home">
-    //     Home Manage
-    //   </a>
-    //   <button
-    //     class="navbar-toggler"
-    //     type="button"
-    //     data-toggle="collapse"
-    //     data-target="#navbarNavAltMarkup"
-    //     aria-controls="navbarNavAltMarkup"
-    //     aria-expanded="false"
-    //     aria-label="Toggle navigation"
-    //   ></button>
-    //   <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
-    //     <div class="nav nav-pills ">
-    //       <a class="nav-item nav-link badge-success " href="/department">
-    //         Department
-    //       </a>
-    //       <a class="nav-item nav-link badge-success ml-3 " href="/employee">
-    //         Employee
-    //       </a>
-    //     </div>
-    //     <nav class="ml-auto font-weight-bold">
-    //       Demo-Project
-    //     </nav>
-    //   </div>
-    // </nav>
   );
 };
 

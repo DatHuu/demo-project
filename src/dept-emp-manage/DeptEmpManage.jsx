@@ -7,7 +7,10 @@ import EmployeeComponent from "../component/employee/EmployeeComponent";
 import DepartmentComponent from "../component/department/DepartmentComponent";
 import PageNotFound from "../component/page-not-found/PageNotFound";
 import FooterComponent from "../component/footer/FooterComponent";
+import DepartmentCreate from "../component/department/DepartmentCreate";
 import './DeptEmpManage.css';
+import EmployeeCreate from "../component/employee/EmployeeCreate";
+import AboutComponent from "../component/about/AboutComponent";
 
 function DeptEmpManage() {
   return (
@@ -18,6 +21,9 @@ function DeptEmpManage() {
           <Route path="/home" element={<HomeComponent />} />
           <Route path="/employee" element={<EmployeeComponent />} />
           <Route path="/department" element={<DepartmentComponent />} />
+          <Route path="/department/:id" element={<DepartmentCreate />} />
+          <Route path="/employee/:id" element={<EmployeeCreate />} />
+          <Route path="/about" element={<AboutComponent/>}/>
           <Route path="/*" element={<PageNotFound />} />
         </Routes>
       </div>
